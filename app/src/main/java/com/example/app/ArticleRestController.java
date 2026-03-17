@@ -14,6 +14,19 @@ public class ArticleRestController{
     @Autowired
     ArticleService articleService;
 
+    @GetMapping("/articles/{id}")
+    public ResponseEntity<ApiResponse<Article>> getId(@PathVariable String id){
+
+        Article article = articleService.showArticle(id);
+
+        ApiResponse<Article> response = new ApiResponse<>(
+                2002,
+                "La liste des articles a été récupérée avec succès",
+                article);
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/articles")
         public ResponseEntity<ApiResponse<List<Article>>> getAll(){
 
