@@ -17,7 +17,7 @@ public class ArticleRestController {
     ArticleService articleService;
 
     @GetMapping("/articles/{id}")
-    public ResponseEntity<ApiResponse<Article>> article(@PathVariable String id){
+    public ResponseEntity<ApiResponse<Article>> getId(@PathVariable String id){
 
         Article article = articleService.showArticle(id);
 
@@ -40,7 +40,7 @@ public class ArticleRestController {
     }
 
     @GetMapping("/articles")
-    public ResponseEntity<ApiResponse<List<Article>>> articles(){
+    public ResponseEntity<ApiResponse<List<Article>>> getAll(){
 
         List<Article> articles = articleService.showAllArticles();
 
@@ -78,7 +78,7 @@ public class ArticleRestController {
 
     @PostMapping("/articles/save")
     public ResponseEntity<ApiResponse<Article>> saveArticle(@RequestBody Article article) {
-        Article articleUpdated = articleService.showArticleUpdate(article);
+        Article articleUpdated = articleService.showArticleUpdated(article);
         if (articleUpdated == null){
             ApiResponse<Article> response = new ApiResponse<>(
                     7006,

@@ -14,7 +14,7 @@ public class DAOArticleMongo implements IDAOArticle {
     ArticleMongoRepository articleMongoRepository;
 
     @Override
-    public Article getArticle(String id){
+    public Article getId(String id){
         ArticleMongo articleMongo = articleMongoRepository.findById(id).orElse(null);
 
         if (articleMongo == null) {
@@ -32,7 +32,7 @@ public class DAOArticleMongo implements IDAOArticle {
 
 
     @Override
-    public List<Article> getAllArticles(){
+    public List<Article> getAll(){
         List<ArticleMongo> articlesMongo = articleMongoRepository.findAll();
         List<Article> articles = new ArrayList<Article>();
 

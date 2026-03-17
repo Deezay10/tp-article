@@ -13,13 +13,13 @@ public class ArticleService {
     IDAOArticle daoArticle;
 
     public Article showArticle(String id){
-        Article article = daoArticle.getArticle(id);
+        Article article = daoArticle.getId(id);
 
         return article;
     }
 
     public List<Article> showAllArticles(){
-        List<Article> articles = daoArticle.getAllArticles();
+        List<Article> articles = daoArticle.getAll();
 
         return articles;
     }
@@ -30,7 +30,7 @@ public class ArticleService {
         return result;
     }
 
-    public Article showArticleUpdate(Article article){
+    public Article showArticleUpdated(Article article){
         Article articleUpdated = daoArticle.saveArticle(article);
 
         return articleUpdated;
