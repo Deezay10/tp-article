@@ -88,7 +88,7 @@ public class DAOArticleMongo implements IDAOArticle {
         else {
             ArticleMongo articleMongo = articleMongoRepository.findById(article.id).orElse(null);
             for (ArticleMongo articleMongoBDD : articlesMongo){
-                if (article.title == articleMongoBDD.title){
+                if (Objects.equals(article.title, articleMongoBDD.title)){
                     return null;
                 }
                 else {

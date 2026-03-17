@@ -89,7 +89,7 @@ public class DAOArticleJpa implements IDAOArticle {
         else {
             ArticleJpa articleJpa = articleJpaRepository.findById(article.id).orElse(null);
             for (ArticleJpa articleJpaBDD : articlesJpa){
-                if (article.title == articleJpaBDD.title){
+                if (Objects.equals(article.title, articleJpaBDD.title)){
                     return null;
                 }
                 else {
