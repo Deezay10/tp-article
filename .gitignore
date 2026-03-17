@@ -1,0 +1,9 @@
+# Project exclude paths
+/.gradle/
+/adapter-mongo/build/
+/adapter-mongo/build/classes/java/main/
+/app/build/
+/app/build/classes/java/main/
+/build/
+/core-domain/build/
+/core-domain/build/classes/java/main/

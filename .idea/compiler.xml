@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo-domain-java.app" options="-parameters" />
+      <module name="demo-domain-java.app.main" options="-parameters" />
+      <module name="demo-domain-java.app.test" options="-parameters" />
+      <module name="tp-article.adapter-mongo" options="-parameters" />
+      <module name="tp-article.adapter-mongo.main" options="-parameters" />
+      <module name="tp-article.adapter-mongo.test" options="-parameters" />
+      <module name="tp-article.app" options="-parameters" />
+      <module name="tp-article.app.main" options="-parameters" />
+      <module name="tp-article.app.test" options="-parameters" />
+      <module name="tp-article.core-domain" options="-parameters" />
+      <module name="tp-article.core-domain.main" options="-parameters" />
+      <module name="tp-article.core-domain.test" options="-parameters" />
+    </option>
+  </component>
+</project>
