@@ -2,8 +2,6 @@ package com.example.app;
 
 import com.example.domain.Article;
 import com.example.domain.ArticleService;
-import com.example.mongo.ArticleMongo;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,46 +9,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class ArticleRestController {
+public class ArticleRestController{
 
     @Autowired
     ArticleService articleService;
 
-    @GetMapping("/articles/{id}")
-    public ResponseEntity<ApiResponse<Article>> getId(@PathVariable String id){
-
-        Article article = articleService.showArticle(id);
-
-        if (article == null){
-            ApiResponse<Article> response = new ApiResponse<>(
-                    7001,
-                    "L'article n'existe pas",
-                    null
-            );
-
-            return ResponseEntity.ofNullable(response);
-        }
-
-        ApiResponse<Article> response = new ApiResponse<>(
-                2002,
-                "L'article a été récupéré avec succès",
-                article
-        );
-        return ResponseEntity.ok(response);
-    }
-
     @GetMapping("/articles")
-    public ResponseEntity<ApiResponse<List<Article>>> getAll(){
+        public ResponseEntity<ApiResponse<List<Article>>> getAll(){
 
-        List<Article> articles = articleService.showAllArticles();
+            List<Article> articles = articleService.showAllArticles();
 
-        ApiResponse<List<Article>> response = new ApiResponse<>(
+            ApiResponse<List<Article>> response = new ApiResponse<>(
                 2002,
                 "La liste des articles a été récupérée avec succès",
                 articles);
 
-        return ResponseEntity.ok(response);
-    }
+            return ResponseEntity.ok(response);
+        }
 
     @DeleteMapping("/articles/{id}")
     public ResponseEntity<ApiResponse<Boolean>> deleteArticle(@PathVariable String id){

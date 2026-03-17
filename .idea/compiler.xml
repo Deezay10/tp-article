@@ -8,6 +8,9 @@
       <module name="demo-domain-java.app" options="-parameters" />
       <module name="demo-domain-java.app.main" options="-parameters" />
       <module name="demo-domain-java.app.test" options="-parameters" />
+      <module name="tp-article.adapter-jpa" options="-parameters" />
+      <module name="tp-article.adapter-jpa.main" options="-parameters" />
+      <module name="tp-article.adapter-jpa.test" options="-parameters" />
       <module name="tp-article.adapter-mongo" options="-parameters" />
       <module name="tp-article.adapter-mongo.main" options="-parameters" />
       <module name="tp-article.adapter-mongo.test" options="-parameters" />
