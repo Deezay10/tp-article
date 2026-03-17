@@ -7,7 +7,7 @@ Réaliser un projet avec des sous-projets :
 - app
 - core-domain
 - adapter-mongo
-- adapter-jpa (en production)
+- adapter-jpa
 
 
 ### Dans le controller, le Service retourne ces informations :
