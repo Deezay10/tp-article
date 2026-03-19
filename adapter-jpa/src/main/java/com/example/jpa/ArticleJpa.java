@@ -2,10 +2,14 @@ package com.example.jpa;
 
 import jakarta.persistence.*;
 
+//On crée la table articles
+
+
 @Entity
 @Table(name="articles")
 public class ArticleJpa {
 
+    //On met en id le paramètre id
     @Id
     public String id;
 
